@@ -41,7 +41,26 @@ for (let i = 0; i < items.length; i++) {
 
 bigImageContainer.innerHTML = bigImageItems;
 
+
+// dinamic small image insertion
+const imageListContainer = document.querySelector(".image-list");
+let littleImageItems = "";
+
+for (let i = 0; i < items.length; i++) {
+    littleImageItems +=
+        `
+        <div class="little-item">
+            <img src="${items[i]}" alt="little image ${title[i]}">
+            <div class="shadow"></div>
+        </div>
+        `;
+}
+
+imageListContainer.innerHTML += littleImageItems;
+
 // on load first image active
 const bigImageClass = document.getElementsByClassName("big-item");
+const littleImageClass = document.getElementsByClassName("little-item");
 
 bigImageClass[0].classList.add("active");
+littleImageClass[0].classList.add("active");
