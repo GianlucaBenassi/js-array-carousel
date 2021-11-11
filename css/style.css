@@ -32,8 +32,13 @@ img {
 }
 
 .big-item {
+    /* display: none; */
     height: 100%;
     position: relative;
+}
+
+.big-item.active {
+    display: block;
 }
 
 .big-item .img-desc {

@@ -21,3 +21,22 @@ const text = [
     'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 ]
+
+// dinamic big images insertion
+const bigImageContainer = document.querySelector(".big-image");
+let bigImageItems = "";
+
+for (let i = 0; i < items.length; i++) {
+    bigImageItems += 
+        `
+        <div class="big-item">
+            <img src="${items[i]}" alt="big image ${title[i]}">
+            <div class="img-desc">
+                <h1>${title[i]}</h1>
+                <p>${text[i]}</p>
+            </div>
+        </div>
+        `;
+}
+
+bigImageContainer.innerHTML = bigImageItems;
