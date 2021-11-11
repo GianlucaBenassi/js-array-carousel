@@ -75,8 +75,12 @@ btnNext.addEventListener("click", function(){
 
     bigImageClass[activeImage].classList.remove("active");
     littleImageClass[activeImage].classList.remove("active");
-
-    activeImage++;
+    
+    if (activeImage == items.length - 1) {
+        activeImage = 0;
+    } else {
+        activeImage++;
+    }
 
     bigImageClass[activeImage].classList.add("active");
     littleImageClass[activeImage].classList.add("active");
@@ -91,7 +95,11 @@ btnPrev.addEventListener("click", function(){
     bigImageClass[activeImage].classList.remove("active");
     littleImageClass[activeImage].classList.remove("active");
 
-    activeImage--;
+    if (activeImage == 0) {
+        activeImage = items.length - 1
+    } else {
+        activeImage--;
+    }
 
     bigImageClass[activeImage].classList.add("active");
     littleImageClass[activeImage].classList.add("active");
