@@ -51,18 +51,37 @@ img {
 .image-list {
     width: 20%;
     height: 100%;
+    overflow-y: hidden;
 }
 
 .little-item {
     height: calc(100% / 5);
+    position: relative;
+}
+
+.little-item img {
+    filter: brightness(.5);
+}
+
+.little-item.active img {
+    filter: brightness(1);
+}
+
+.little-item.active .shadow {
+    box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 
 /* +++++ debug +++++ */
 
-.debug .container {
+/* .debug .container {
     background-color: blue;
-}
+} */
 
 .debug .big-image {
     background-color: red;
@@ -72,7 +91,7 @@ img {
     background-color: green;
 }
 
-.debug .little-item {
+/* .debug .little-item {
     background-color: grey;
     border: 1px solid black;
-}
+} */
