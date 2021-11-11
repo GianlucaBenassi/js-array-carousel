@@ -22,7 +22,7 @@ const text = [
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 ]
 
-// dinamic big images insertion
+// ***** dinamic big images insertion
 const bigImageContainer = document.querySelector(".big-image");
 let bigImageItems = "";
 
@@ -42,7 +42,7 @@ for (let i = 0; i < items.length; i++) {
 bigImageContainer.innerHTML = bigImageItems;
 
 
-// dinamic small image insertion
+// ***** dinamic small image insertion
 const imageListContainer = document.querySelector(".image-list");
 let littleImageItems = "";
 
@@ -58,9 +58,42 @@ for (let i = 0; i < items.length; i++) {
 
 imageListContainer.innerHTML += littleImageItems;
 
-// on load first image active
+// ***** on load first image active
 const bigImageClass = document.getElementsByClassName("big-item");
 const littleImageClass = document.getElementsByClassName("little-item");
 
 bigImageClass[0].classList.add("active");
 littleImageClass[0].classList.add("active");
+
+// ***** on click active image
+let activeImage = 0;
+
+// next image
+const btnNext = document.getElementById("next");
+
+btnNext.addEventListener("click", function(){
+
+    bigImageClass[activeImage].classList.remove("active");
+    littleImageClass[activeImage].classList.remove("active");
+
+    activeImage++;
+
+    bigImageClass[activeImage].classList.add("active");
+    littleImageClass[activeImage].classList.add("active");
+
+});
+
+// previous image
+const btnPrev = document.getElementById("prev");
+
+btnPrev.addEventListener("click", function(){
+
+    bigImageClass[activeImage].classList.remove("active");
+    littleImageClass[activeImage].classList.remove("active");
+
+    activeImage--;
+
+    bigImageClass[activeImage].classList.add("active");
+    littleImageClass[activeImage].classList.add("active");
+
+});
