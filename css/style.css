@@ -18,11 +18,6 @@
     display: flex;
 }
 
-.big-image,
-.image-list {
-    height: 100%;
-}
-
 
 /* ***** big image ***** */
 
@@ -30,10 +25,21 @@
     width: 80%;
 }
 
+.big-image .item {
+    height: 100%;
+}
+
+.big-image .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /* ***** image list ***** */
 
 .image-list {
     width: 20%;
+    height: 100%;
 }
 
 
