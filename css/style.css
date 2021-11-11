@@ -53,11 +53,15 @@ img {
 
 /* ***** image list ***** */
 
-.image-list {
+.little-image {
     width: 20%;
     height: 100%;
-    overflow-y: hidden;
     position: relative;
+}
+
+.image-list {
+    overflow-y: hidden;
+    height: 100%;
 }
 
 .little-item {

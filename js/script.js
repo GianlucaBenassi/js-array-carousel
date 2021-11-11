@@ -3,7 +3,8 @@ const items = [
     'img/02.jpg',
     'img/03.jpg',
     'img/04.jpg',
-    'img/05.jpg'
+    'img/05.jpg',
+    'img/01.jpg'
 ];
 
 const title = [
@@ -11,7 +12,8 @@ const title = [
     'Svizzera',
     'Gran Bretagna',
     'Germania',
-    'Paradise'
+    'Paradise',
+    'Svezia'
 ]
 
 const text = [
@@ -20,6 +22,7 @@ const text = [
     'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
     'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
+    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
 ]
 
 // ***** dinamic big images insertion
@@ -56,7 +59,8 @@ for (let i = 0; i < items.length; i++) {
         `;
 }
 
-imageListContainer.innerHTML += littleImageItems;
+imageListContainer.innerHTML = littleImageItems;
+
 
 // ***** on load first image active
 const bigImageClass = document.getElementsByClassName("big-item");
@@ -64,6 +68,7 @@ const littleImageClass = document.getElementsByClassName("little-item");
 
 bigImageClass[0].classList.add("active");
 littleImageClass[0].classList.add("active");
+
 
 // ***** on click active image
 let activeImage = 0;
@@ -85,6 +90,8 @@ btnNext.addEventListener("click", function(){
     bigImageClass[activeImage].classList.add("active");
     littleImageClass[activeImage].classList.add("active");
 
+    littleImageClass[activeImage].scrollIntoView(false);
+
 });
 
 // previous image
@@ -103,5 +110,7 @@ btnPrev.addEventListener("click", function(){
 
     bigImageClass[activeImage].classList.add("active");
     littleImageClass[activeImage].classList.add("active");
+
+    littleImageClass[activeImage].scrollIntoView(false);
 
 });
