@@ -52,6 +52,7 @@ img {
     width: 20%;
     height: 100%;
     overflow-y: hidden;
+    position: relative;
 }
 
 .little-item {
@@ -76,6 +77,33 @@ img {
     bottom: 0;
 }
 
+#prev,
+#next {
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255,255,255,.8);
+    border-radius: 50%;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#prev:hover,
+#next:hover {
+    cursor: pointer;
+}
+
+#prev {
+    top: 20px;
+}
+
+#next {
+    bottom: 20px;
+}
 
 /* +++++ debug +++++ */
 
