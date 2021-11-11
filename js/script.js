@@ -40,3 +40,8 @@ for (let i = 0; i < items.length; i++) {
 }
 
 bigImageContainer.innerHTML = bigImageItems;
+
+// on load first image active
+const bigImageClass = document.getElementsByClassName("big-item");
+
+bigImageClass[0].classList.add("active");
