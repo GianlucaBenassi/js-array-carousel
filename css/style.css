@@ -5,3 +5,48 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.container {
+    width: 70%;
+    height: 70vh;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+}
+
+.big-image,
+.image-list {
+    height: 100%;
+}
+
+
+/* ***** big image ***** */
+
+.big-image {
+    width: 80%;
+}
+
+/* ***** image list ***** */
+
+.image-list {
+    width: 20%;
+}
+
+
+/* +++++ debug +++++ */
+
+.debug .container {
+    background-color: blue;
+}
+
+.debug .big-image {
+    background-color: red;
+}
+
+.debug .image-list {
+    background-color: green;
+}
