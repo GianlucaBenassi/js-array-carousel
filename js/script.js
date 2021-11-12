@@ -73,7 +73,7 @@ littleImageClass[0].classList.add("active");
 // ***** on click active image
 let activeImage = 0;
 
-// next image
+// button next image
 const btnNext = document.getElementById("next");
 
 btnNext.addEventListener("click", function(){
@@ -94,7 +94,7 @@ btnNext.addEventListener("click", function(){
 
 });
 
-// previous image
+// button previous image
 const btnPrev = document.getElementById("prev");
 
 btnPrev.addEventListener("click", function(){
@@ -114,3 +114,23 @@ btnPrev.addEventListener("click", function(){
     littleImageClass[activeImage].scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
 
 });
+
+// click image
+
+for (let i = 0; i < littleImageClass.length; i++) {
+
+    littleImageClass[i].addEventListener("click", function(){
+
+        bigImageClass[activeImage].classList.remove("active");
+        littleImageClass[activeImage].classList.remove("active");
+
+        activeImage = i;
+
+        bigImageClass[activeImage].classList.add("active");
+        littleImageClass[activeImage].classList.add("active");
+
+        littleImageClass[activeImage].scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
+
+    });
+
+}
