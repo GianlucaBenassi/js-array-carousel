@@ -163,7 +163,7 @@ img {
     }
 
     .image-list {
-        display: block;
+        flex-direction: column;
     }
 
     .little-item {

@@ -90,7 +90,7 @@ btnNext.addEventListener("click", function(){
     bigImageClass[activeImage].classList.add("active");
     littleImageClass[activeImage].classList.add("active");
 
-    littleImageClass[activeImage].scrollIntoView(false);
+    littleImageClass[activeImage].scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
 
 });
 
@@ -111,6 +111,6 @@ btnPrev.addEventListener("click", function(){
     bigImageClass[activeImage].classList.add("active");
     littleImageClass[activeImage].classList.add("active");
 
-    littleImageClass[activeImage].scrollIntoView(false);
+    littleImageClass[activeImage].scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
 
 });
